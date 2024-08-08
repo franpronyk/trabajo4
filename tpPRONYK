@@ -1,0 +1,28 @@
+class Jugador:
+    def _init_(self, nombre, posicion, edad, pais):
+        self.nombre = nombre
+        self.posicion = posicion
+        self.edad = edad
+        self.pais = pais
+
+def crear_jugador():
+    nombre = input("Ingrese el nombre del jugador: ")
+    posicion = input("Ingrese la posición del jugador (delantero, defensor, mediocampista, etc.): ")
+    edad = int(input("Ingrese la edad del jugador: "))
+    pais = input("Ingrese el país del jugador: ")
+    
+    jugador = Jugador(nombre, posicion, edad, pais)
+    return jugador
+
+def mostrar_jugador(jugador):
+    print("Nombre:", jugador.nombre)
+    print("Posición:", jugador.posicion)
+    print("Edad:", jugador.edad)
+    print("País:", jugador.pais)
+
+def menu():
+    while True:
+        print("\nMenú Crear Jugador de Fútbol")
+        print("1. Crear jugador")
+        print("2. Mostrar jugador")
+        print("3. Salir")
